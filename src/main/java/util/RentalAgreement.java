@@ -170,11 +170,11 @@ public class RentalAgreement {
     public String toString() {
         DateTimeFormatter outputDate = DateTimeFormatter.ofPattern("MM/dd/yy");
         return "Rental Agreement -------------------\n" +
-                "src.main.java.tools.Tool Code: " + toolCode + "\n" +
-                "src.main.java.tools.Tool Type: " + toolType + "\n" +
-                "src.main.java.tools.Tool Brand: " + toolBrand  + "\n" +
+                "Tool Code: " + toolCode + "\n" +
+                "Tool Type: " + toolType + "\n" +
+                "Tool Brand: " + toolBrand  + "\n" +
                 "Rental Days: " + rentalDays + "\n" +
-                "src.main.java.util.Checkout Date: " + outputDate.format(checkOutDate)+ "\n" +
+                "Checkout Date: " + outputDate.format(checkOutDate)+ "\n" +
                 "Due Date: " + outputDate.format(dueDate) + "\n" +
                 "Daily Charge: " + currencyFormat(dailyCharge) + "\n" +
                 "Charge Days: " + chargeDays + "\n" +

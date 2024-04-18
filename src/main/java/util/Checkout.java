@@ -25,7 +25,7 @@ public class Checkout {
     }
 
     public void processCheckout() {
-        System.out.println("Welcome to the src.main.java.tools.Tool Shop!");
+        System.out.println("Welcome to the Tool Shop!");
 
         while (true) {
             // gather user input for tool code
