@@ -18,4 +18,6 @@ public class HolidayList {
     public boolean isHoliday(LocalDate date){
         return this.holidays.contains(date);
     }
+
+    public void removeHoliday(LocalDate holiday) { this.holidays.remove(holiday);}
 }
