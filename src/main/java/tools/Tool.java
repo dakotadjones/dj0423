@@ -4,7 +4,6 @@ import src.main.java.util.HolidayList;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.temporal.ChronoUnit;
 
 public abstract class Tool {
@@ -76,12 +75,6 @@ public abstract class Tool {
             for (LocalDate date = startDate; date.isBefore(endDate.plusDays(1)); date = date.plusDays(1)) {
                 if (holidayList.isHoliday(date) &&  !date.getDayOfWeek().toString().equals("SATURDAY") && !date.getDayOfWeek().toString().equals("SUNDAY")) {
                     chargeDays--;
-                    holidayList.removeHoliday(date);
-                }
-                // account for 4th of july on sat or sun
-                if (holidayList.isHoliday(date) && date.getMonth().equals(Month.JULY)){
-                    chargeDays --;
-                    holidayList.removeHoliday(date);
                 }
             }
         }
