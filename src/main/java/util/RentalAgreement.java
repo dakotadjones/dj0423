@@ -143,7 +143,7 @@ public class RentalAgreement {
         return dailyCharge.multiply(new BigDecimal(daysToRent)).setScale(2, RoundingMode.HALF_UP);
     }
     private BigDecimal calculateDiscountAmount(BigDecimal preDiscountCharge, int discountPercentage) {
-        if (discountPercentage > 0 && discountPercentage < 100) {
+        if (discountPercentage > 0 && discountPercentage <= 100) {
             discountCharge = preDiscountCharge.multiply(new BigDecimal(discountPercentage / 100.0)).setScale(2, RoundingMode.HALF_UP);
             return discountCharge;
         }
